@@ -131,7 +131,7 @@ Privacy & terms
 
 ## Sections
 
-- Logog + Navigation
+- Logo + Navigation
 - Hero
 - Featured in (logos)
 - How it works
