@@ -19,7 +19,7 @@ Paragraph default: 1.6
 
 - Letter-spacing
 Heading: -0.5px
-subheading: 0.75px
+subheading, heading-featured-in: 0.75px
 
 --- 02 COLORS
 
@@ -33,6 +33,7 @@ subheading: 0.75px
 #555
 #333
 #ddd
+#888
 
 --- 05 SHADOWS
 
