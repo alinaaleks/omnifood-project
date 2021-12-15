@@ -39,6 +39,7 @@ subheading, heading-featured-in: 0.75px
 
 --- 06 BORDER-RADIUS
 Default: 9px
+Larger: 11px
 
 --- 07 WHITESPACE
 
@@ -128,9 +129,9 @@ body {
   display: block;
   margin-bottom: 1.6rem;
   color: #cf711f;
+  text-transform: uppercase;
   font-size: 1.6rem;
   font-weight: 500;
-  text-transform: uppercase;
   letter-spacing: 0.75px;  
 }
 
