@@ -315,3 +315,37 @@ background-color: #fae5d3;
   /* font-size not used for a link to make class 'link' reusable one */
   font-size: 1.8rem;
 }
+
+/**************************************/
+/* TESTIMONIALS SECTION */
+/**************************************/
+
+.section-testimonials {
+  padding: 9.6rem 0;
+}
+
+.testimonials {
+  /* we don't use reusable grid here 'cause it's more for a whole page layout (here it occupies half of the screen and the gap will be less) */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.8rem;
+}
+
+.testimonial-img {
+  width: 6.4rem;
+  margin-bottom: 1.2rem;
+  /* images are squared so no need to add height */
+  border-radius: 50%;
+}
+
+.testimonial-text {
+  margin-bottom: 1.6rem;
+  font-size: 1.8rem;
+  /* line-height multiplies font-size, so it has no unit */
+  line-height: 1.8;
+}
+
+.testimonial-name {
+  color: #777;
+  font-size: 1.6rem;
+}
