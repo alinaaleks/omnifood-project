@@ -321,14 +321,22 @@ background-color: #fae5d3;
 /**************************************/
 
 .section-testimonials {
-  padding: 9.6rem 0;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
+  background-color: #fdf2e9;
+}
+
+.testimonials-container {
+  padding: 9.6rem;
 }
 
 .testimonials {
   /* we don't use reusable grid here 'cause it's more for a whole page layout (here it occupies half of the screen and the gap will be less) */
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4.8rem;
+  row-gap: 4.8rem;
+  column-gap: 8rem;
 }
 
 .testimonial-img {
@@ -346,6 +354,27 @@ background-color: #fae5d3;
 }
 
 .testimonial-name {
-  color: #777;
+  color: #6f6f6f;
   font-size: 1.6rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  padding: 1.6rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  transition: all 0.4s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
 }
