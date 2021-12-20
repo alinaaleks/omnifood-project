@@ -27,6 +27,7 @@ subheading, heading-featured-in: 0.75px
 - Tints:
 #fdf2e9
 #fae5d3
+#eb984e
 - Shades: #cf711f
 - Accents: #fff
 - Greys
@@ -37,6 +38,8 @@ subheading, heading-featured-in: 0.75px
 #6f6f6f (lightest grey allowed on #fdf2e9)
 
 --- 05 SHADOWS
+
+box-shadow: 0 3.2rem 6.4rem hsla(0, 0%, 0%, 0.06);
 
 --- 06 BORDER-RADIUS
 Default: 9px

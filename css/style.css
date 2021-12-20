@@ -465,3 +465,36 @@ background-color: #fae5d3;
   font-size: 1.8rem;
   line-height: 1.8;
 }
+
+/**************************************/
+/* CTA SECTION */
+/**************************************/
+
+.section-cta {
+  padding: 9.6rem 0;
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  overflow: hidden;
+  /* also first value could be 90deg, 180deg etc; to right, to left etc: */
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+  box-shadow: 0 3.2rem 6.4rem hsla(0, 0%, 0%, 0.15);
+  border-radius: 11px;
+
+  /* temp */
+  height: 50rem;
+}
+
+.cta-text-box {
+
+}
+
+.cta-img-box {
+  /* from first to last. so gradient covers img.
+  Image in css 'cause it's more esthetical nd not peice of content */
+  background-image: linear-gradient(to right bottom, hsla(28, 80%, 61%, 0.35), hsla(28, 80%, 52%, 0.35)), url("../img/eating.jpg");
+  background-size: cover;
+  background-position: center;
+}
