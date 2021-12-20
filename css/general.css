@@ -32,12 +32,13 @@ subheading, heading-featured-in: 0.75px
 #45260a
 - Accents: #fff
 - Greys
+#ddd
+#aaa (the lighter for form field descriptions)
+#888
+#767676 (lightest grey allowed on #fff)
+#6f6f6f (lightest grey allowed on #fdf2e9)
 #555
 #333
-#ddd
-#888
-#aaa (the lighter for form field descriptions)
-#6f6f6f (lightest grey allowed on #fdf2e9)
 
 --- 05 SHADOWS
 
