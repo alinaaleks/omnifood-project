@@ -483,8 +483,7 @@ background-color: #fae5d3;
   box-shadow: 0 3.2rem 6.4rem hsla(0, 0%, 0%, 0.15);
   border-radius: 11px;
 
-  /* temp */
-  height: 50rem;
+  /* when started to fill this block - set temporary width to make it visible */
 }
 
 .cta-text-box {
@@ -498,7 +497,8 @@ background-color: #fae5d3;
 
 .cta .heading-secondary {
   margin-bottom: 3.2rem;
-  color: #45260a;
+  /* color: #45260a; */
+  color: inherit;
 }
 
 .cta-text {
@@ -509,7 +509,7 @@ background-color: #fae5d3;
 .cta-img-box {
   /* from first to last. so gradient covers img.
   Image in css 'cause it's more esthetical nd not peice of content */
-  background-image: linear-gradient(to right bottom, hsla(28, 80%, 61%, 0.35), hsla(28, 80%, 52%, 0.35)), url("../img/eating.jpg");
+  background-image: linear-gradient(to right bottom, rgba(235, 150, 76, 0.35), rgba(231, 126, 35, 0.35)), url("../img/eating.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -519,4 +519,34 @@ background-color: #fae5d3;
   grid-template-columns: 1fr 1fr;
   column-gap: 3.2rem;
   row-gap: 2.4rem;
+}
+
+.cta-form label {
+  display: block;
+  margin-bottom: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.cta-form input, .cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  background-color: #fdf2e9;
+  /* box-shadow properties horizontally-vertycally-blur-color */
+  box-shadow: 0 1px 2px rgba(0,0,0,.1);
+  border: none;
+  border-radius: 9px;
+  /* input-elements, button, select do not inherit font-family from the body --- command below forces to inherit (uses not just for font-family)*/
+  color: inherit;
+  font-family: inherit;
+  font-size: 1.8rem;
+}
+
+.cta-form input::placeholder {
+  color: #aaa;
+}
+
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
 }
