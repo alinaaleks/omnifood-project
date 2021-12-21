@@ -98,7 +98,8 @@ body {
 }
 
 .grid {
-  display: grid;column-gap: 6.4rem;
+  display: grid;
+  column-gap: 6.4rem;
   row-gap: 9.6rem;
   /* alternative way of adding margin to a grid except last one (or if its only one) - add to all, then remove on last. We go with "not last child"
   margin-bottom: 9.6rem; */

@@ -17,6 +17,11 @@ rem shows some bugs in media-queries, so em is better */
     font-size: 4.4rem;
   }
 
+  .testimonials-container {
+    /* align-self: start; */
+    padding: 12.8rem;
+  }
+
   .testimonials {
     grid-template-columns: 1fr;
     row-gap: 6.4rem;
@@ -26,6 +31,53 @@ rem shows some bugs in media-queries, so em is better */
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* .gallery-item {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+  } */
+
+  /* .gallery-item img {
+    margin: auto;
+    width: 100;
+  } */
+
+}
+
+/**************************************/
+/* BELOW 1200px (for landscape tablets */
+/**************************************/
+
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px = 56.25% */
+    font-size: 56.25%;
+  }
+
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+
+  .hero {
+    gap: 4.8rem;
+  }
+
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
 }
 
 /* 
