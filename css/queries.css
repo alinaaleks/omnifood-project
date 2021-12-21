@@ -17,11 +17,6 @@ rem shows some bugs in media-queries, so em is better */
     font-size: 4.4rem;
   }
 
-  .testimonials-container {
-    /* align-self: start; */
-    padding: 12.8rem;
-  }
-
   .testimonials {
     grid-template-columns: 1fr;
     row-gap: 6.4rem;
@@ -78,6 +73,7 @@ rem shows some bugs in media-queries, so em is better */
   .heading-tertiary {
     font-size: 2.4rem;
   }
+
 }
 
 /* 
