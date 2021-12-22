@@ -16,6 +16,7 @@ Default: 1
 Small: 1.05
 Medium: 1.2
 Paragraph default: 1.6
+Large: 1.8
 
 - Letter-spacing
 Heading: -0.5px
@@ -259,6 +260,7 @@ body {
   align-items: center;
   gap: 1.6rem;
   font-size: 1.8rem;
+  line-height: 1.2;
 }
 
 .list-icon {
