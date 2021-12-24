@@ -141,7 +141,7 @@ rem shows some bugs in media-queries, so em is better */
     transition: all 0.5s ease-in;
     /* HIDE THE NAVIGATION */
     /* Allows NO transitions (animations) at all:
-    display: none; - it is as if the element does not exist */
+    display: none; - it is as if the element does not exist. So to have the animation we will hide in 3 steps */
 
     /* 1) Hide element visually */
     opacity: 0;
