@@ -178,14 +178,100 @@ rem shows some bugs in media-queries, so em is better */
 }
 }
 
-/* .section-testimonials {
+/**************************************/
+/* BELOW 704px (for smaller tablets) */
+/**************************************/
+
+@media (max-width: 44em) {
+  .grid--3-cols, .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heading-secondary {
+    margin-bottom: 4.8rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0 12.8rem;
+  }
+
+  .hero-img-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-img {
+    width: 75%;
+  }
+
+  .section-how, .section-meals, .section-pricing, .section-cta {
+    padding: 6.4rem 0;
+  }
+
+  .diets {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
+  .list--meals {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 8rem;
+  }
+
+  .heading-tertiary--meals {
+    text-align: center;
+  }
+
+  .testimonials-container {
+    padding: 3.2rem;
+  }
+
+  .section-testimonials {
   grid-template-columns: 1fr;
  }
 
+ .testimonials {
+  grid-template-columns: 1fr 1fr;
+  row-gap: 4.8rem;
+}
+
  .gallery {
    grid-template-columns: repeat(6, 1fr);
- 
- */
+ }
+
+ .grid:not(:last-child) {
+   margin-bottom: 4.8rem;
+ }
+
+ .pricing-plan {
+   width: 100%;
+ }
+
+
+ .footer {
+   padding: 6.4rem;
+ }
+
+ .grid--footer {
+  grid-template-columns: repeat(6, 1fr);
+ }
+
+  .nav-col {
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+
+  .logo-col, .address-col {
+    grid-column: span 3;
+  }
+  
+}
+
+
 
 
 /* 
