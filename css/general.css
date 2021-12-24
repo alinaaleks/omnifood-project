@@ -74,6 +74,7 @@ Larger: 11px
 }
 
 html {
+  overflow-x: hidden;
   /* font-size: 10px; */
   /* 10px / 16px = 0.625 = 62.5%
   Percentage of user's browser font-size setting */
@@ -81,6 +82,9 @@ html {
 }
 
 body {
+  /* 1) it works if there is nothing absolutely positioned in relation to body!!
+  2) if set overflow: none; then page won't move vertically too.*/
+  overflow-x: hidden;
   color: #555;
   font-family: "Rubik", sans-serif;
   font-weight: 400;
