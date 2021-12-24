@@ -119,6 +119,63 @@ rem shows some bugs in media-queries, so em is better */
   .btn--form {
     margin-top: 1.2rem;
   }
+
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  .main-nav {
+    /* DEFAULT STATE */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    /* 1 - which property we want to animate; 2 - duration; 3 - type of the animation (by defaulte it's linear) */
+    transition: all 0.5s ease-in;
+    /* HIDE THE NAVIGATION */
+    /* Allows NO transitions (animations) at all:
+    display: none; - it is as if the element does not exist */
+
+    /* 1) Hide element visually */
+    opacity: 0;
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+    /* 3) Hide it from screen-readers */
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    transform: translateX(0);
+    /* when it active - turn all back */
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+.main-nav-link:visited {
+  font-size: 3rem;
+}
 }
 
 /* .section-testimonials {
