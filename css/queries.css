@@ -193,12 +193,11 @@ rem shows some bugs in media-queries, so em is better */
 
   .hero {
     grid-template-columns: 1fr;
-    padding: 0 12.8rem;
+    text-align: center;
+    padding: 0 8rem;
   }
 
-  .hero-img-box {
-    display: flex;
-    align-items: center;
+  .delivered-meals {
     justify-content: center;
   }
 
