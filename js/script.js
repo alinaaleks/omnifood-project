@@ -31,6 +31,37 @@ btnNavEl.addEventListener("click", function () {
 })
 
 ///////////////////////////////////////////////////////////
+// Sticky navigation
+
+const sectionHeroEl = document.querySelector(".section-hero");
+
+const obs = new IntersectionObserver(
+  function (entries) {
+  const ent = entries[0];
+  console.log(ent);
+
+  // if false
+  if (!ent.isIntersecting) {    
+    document.body.classList.add("sticky");
+    headerEl.classList.remove("nav-open");
+  }
+
+  // if true
+  if (ent.isIntersecting) {    
+    document.body.classList.remove("sticky");
+    headerEl.classList.remove("nav-open");
+  }
+}, 
+{
+  // it means observe it in a viewport (null mens the viewport)
+  root: null,
+  // we'll have an event as soon as 0% of element is visible. if it is 1 - then when completely inside the viewport
+  threshold: 0,
+  rootMargin: "-80px",
+})
+obs.observe(sectionHeroEl);
+
+///////////////////////////////////////////////////////////
 // Smooth scrolling animation
 // it will select anchor-elements which have href property
 const allLinks = document.querySelectorAll("a:link");
@@ -61,36 +92,6 @@ allLinks.forEach(function(link) {
 });
 
 ///////////////////////////////////////////////////////////
-// Sticky navigation
-
-const sectionHeroEl = document.querySelector(".section-hero");
-
-const obs = new IntersectionObserver(
-  function (entries) {
-  const ent = entries[0];
-  console.log(ent);
-
-  // if false
-  if (!ent.isIntersecting) {    
-    document.body.classList.add("sticky");
-  }
-
-  // if true
-  if (ent.isIntersecting) {    
-    document.body.classList.remove("sticky");
-  }
-}, 
-{
-  // it means observe it in a viewport (null mens the viewport)
-  root: null,
-  // we'll have an event as soon as 0% of element is visible. if it is 1 - then when completely inside the viewport
-  threshold: 0,
-  rootMargin: "-80px",
-})
-obs.observe(sectionHeroEl);
-
-
-///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
   var flex = document.createElement("div");
@@ -111,54 +112,3 @@ function checkFlexGap() {
 checkFlexGap();
 
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
-
-/*
-.no-flexbox-gap .main-nav-list li:not(:last-child) {
-  margin-right: 4.8rem;
-}
-
-.no-flexbox-gap .list-item:not(:last-child) {
-  margin-bottom: 1.6rem;
-}
-
-.no-flexbox-gap .list-icon:not(:last-child) {
-  margin-right: 1.6rem;
-}
-
-.no-flexbox-gap .delivered-faces {
-  margin-right: 1.6rem;
-}
-
-.no-flexbox-gap .meal-attribute:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-.no-flexbox-gap .meal-icon {
-  margin-right: 1.6rem;
-}
-
-.no-flexbox-gap .footer-row div:not(:last-child) {
-  margin-right: 6.4rem;
-}
-
-.no-flexbox-gap .social-links li:not(:last-child) {
-  margin-right: 2.4rem;
-}
-
-.no-flexbox-gap .footer-nav li:not(:last-child) {
-  margin-bottom: 2.4rem;
-}
-
-@media (max-width: 75em) {
-  .no-flexbox-gap .main-nav-list li:not(:last-child) {
-    margin-right: 3.2rem;
-  }
-}
-
-@media (max-width: 59em) {
-  .no-flexbox-gap .main-nav-list li:not(:last-child) {
-    margin-right: 0;
-    margin-bottom: 4.8rem;
-  }
-}
-*/
