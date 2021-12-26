@@ -60,6 +60,35 @@ allLinks.forEach(function(link) {
   });
 });
 
+///////////////////////////////////////////////////////////
+// Sticky navigation
+
+const sectionHeroEl = document.querySelector(".section-hero");
+
+const obs = new IntersectionObserver(
+  function (entries) {
+  const ent = entries[0];
+  console.log(ent);
+
+  // if false
+  if (!ent.isIntersecting) {    
+    document.body.classList.add("sticky");
+  }
+
+  // if true
+  if (ent.isIntersecting) {    
+    document.body.classList.remove("sticky");
+  }
+}, 
+{
+  // it means observe it in a viewport (null mens the viewport)
+  root: null,
+  // we'll have an event as soon as 0% of element is visible. if it is 1 - then when completely inside the viewport
+  threshold: 0,
+  rootMargin: "-80px",
+})
+obs.observe(sectionHeroEl);
+
 
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
