@@ -79,6 +79,8 @@ html {
   /* 10px / 16px = 0.625 = 62.5%
   Percentage of user's browser font-size setting */
   font-size: 62.5%;
+  /* but it does NOT work on safari and microsoft Edge - on all iPhones it won't work 'cause google chrome etc use safari engine scroll-behavior: smooth; */
+  
 }
 
 body {

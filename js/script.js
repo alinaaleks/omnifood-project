@@ -12,6 +12,8 @@ console.log(h1);
 //   h1.style.padding = "5rem";
 // });
 
+// El in name stands for 'element'
+
 ///////////////////////////////////////////////////////////
 // Set current year
 const yearEl = document.querySelector(".year");
@@ -21,7 +23,6 @@ yearEl.textContent = currentYear;
 
 ///////////////////////////////////////////////////////////
 // Make mobile navigation work
-
 const btnNavEl = document.querySelector(".btn-mobile-nav");
 const headerEl = document.querySelector(".header");
 
@@ -29,7 +30,36 @@ btnNavEl.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
 })
 
-("nav-open")
+///////////////////////////////////////////////////////////
+// Smooth scrolling animation
+// it will select anchor-elements which have href property
+const allLinks = document.querySelectorAll("a:link");
+console.log(allLinks);
+
+allLinks.forEach(function(link) {
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
+    const href = link.getAttribute("href");
+
+    // Scroll back to top
+    if (href === "#") window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+
+    // Scroll to sections
+    if (href !== "#" && href.startsWith("#")) {
+      const sectionEl = document.querySelector(href);
+      // console.log(sectionEl);
+      sectionEl.scrollIntoView({behavior: "smooth"});
+    }
+
+    // Close mobile navigation when nav-link selected
+    if (link.classList.contains("main-nav-link"))
+    headerEl.classList.toggle("nav-open");
+  });
+});
+
 
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
