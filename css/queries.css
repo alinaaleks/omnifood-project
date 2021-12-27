@@ -146,7 +146,7 @@ rem shows some bugs in media-queries, so em is better */
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     /* 1 - which property we want to animate; 2 - duration; 3 - type of the animation (by defaulte it's linear) */
-    transition: all 0.5s ease-in;
+    /* transition: all 0.3s ease-in; */
     /* HIDE THE NAVIGATION */
     /* Allows NO transitions (animations) at all:
     display: none; - it is as if the element does not exist. So to have the animation we will hide in 3 steps */
