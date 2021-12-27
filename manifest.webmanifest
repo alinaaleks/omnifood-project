@@ -1,0 +1,11 @@
+// used for Android to recognize different favicons
+
+{
+  "icons": [
+    // displayed on a home screen
+    { "src": "img/favicon-192.png", "type": "image/png", "sizes": "192x192" },
+
+    // will be used as a splash screen as PWA is loading
+    { "src": "img/favicon-512.png", "type": "image/png", "sizes": "512x512" }
+  ]
+}
