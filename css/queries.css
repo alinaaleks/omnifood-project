@@ -122,7 +122,7 @@ rem shows some bugs in media-queries, so em is better */
 
   /* MOBILE NAVIGATION */
   .section-how, .section-meals, .section-testimonials, .section-pricing, .section-cta {
-    scroll-margin: 8rem;
+    scroll-margin: 4.8rem;
   }
 
   .btn-mobile-nav {
@@ -158,6 +158,15 @@ rem shows some bugs in media-queries, so em is better */
     /* 3) Hide it from screen-readers */
     visibility: hidden;
   }
+
+  .main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 0.8rem 1.2rem;
+}
+
+.sticky .header {
+  height: 4.8rem;
+}
 
   .nav-open .main-nav {
     transform: translateX(0);
