@@ -121,6 +121,10 @@ rem shows some bugs in media-queries, so em is better */
   }
 
   /* MOBILE NAVIGATION */
+  .section-how, .section-meals, .section-testimonials, .section-pricing, .section-cta {
+    scroll-margin: 8rem;
+  }
+
   .btn-mobile-nav {
     display: block;
     z-index: 9999;
