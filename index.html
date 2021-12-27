@@ -479,7 +479,7 @@
             <p class="cta-text">Healthy, tasty and hassle-free meals are waiting for you. Start eating well today. You can cancel or pause anytime. And the first meal is on us!</p>
           </div>
 <!-- action attribute sends recieved data to where we specify -->
-            <form class="cta-form" action="#">
+            <form class="cta-form" name="sign-up" netlify>
               <!-- good practice to write how actual data should look like in placeholder and description in label tag. 
               
               "for" links label to input element if id and for the same
@@ -489,15 +489,15 @@
           usually label and input go in one div-container-->
             <div>
               <label for="full-name">Full name</label>
-              <input id="full-name" type="text" placeholder="John Smith" required />
+              <input id="full-name" name="full-name" type="text" placeholder="John Smith" required />
             </div>
             <div>
               <label for="email">Email address</label>
-              <input id="email" type="email" placeholder="me@example.com" required />
+              <input id="email" name="email" type="email" placeholder="me@example.com" required />
             </div>
             <div>
               <label for="select-where">Where did you hear from us?</label>
-              <select id="select-where" required>
+              <select id="select-where" name="select-where" required>
                 <!-- required attribute needs value in a field
                   since value below is "" (empty) user cannot submit the form if choose this option.  -->
                 <option value="">Please choose one option:</option>
