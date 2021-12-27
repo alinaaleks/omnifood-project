@@ -92,7 +92,13 @@
           </div>
 
           <div class="hero-img-box">
-            <img class="hero-img" src="img/hero.png" alt="Woman enjoying food, meals in storage container, and food bowls on a table" />
+            <picture>
+              <source srcset="img/hero.webp" type="image/webp" />
+              <source srcset="img/hero-min.png" type="image/png" />
+<!-- by using picture-el browser will decide which src fits best from 2 above for img below -->
+              <img class="hero-img" src="img/hero-min.png" alt="Woman enjoying food, meals in storage container, and food bowls on a table" />
+            </picture>
+            <!-- <img class="hero-img" src="img/hero-min.png" alt="Woman enjoying food, meals in storage container, and food bowls on a table" /> -->
           </div>
 
         </div>
